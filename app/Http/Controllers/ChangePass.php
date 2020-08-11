@@ -13,7 +13,7 @@ class ChangePass extends Controller
     
         
        $mail=$request->mail;
-       $password=Hash::make($request->mail);
+       $password=Hash::make($request->password);
 
        $validator = Validator::make($request->all(), [
            'password' => ['required','min:8', 'max:16'],
